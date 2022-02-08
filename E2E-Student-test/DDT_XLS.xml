@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="5bc4e6e1-60dc-4e2c-90ec-4567d73d377d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="DDT_XLS" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">true</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="5bc4e6e1-60dc-4e2c-90ec-4567d73d377dfileName">DDT_XLS</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Data Source_XLS" id="8a63daa9-e8bf-41b3-8a15-ae2a241cd117">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/Users/MEGHMC/OneDrive - Capgemini/Createuser.xlsx</file>
+          <worksheet>Sheet1</worksheet>
+          <cell>A1</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>FirstName</con:property>
+      <con:property>MiddleName</con:property>
+      <con:property>LastName</con:property>
+      <con:property>DateOfBirth</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create_XLS" id="b445c525-8646-41c9-bdfa-be38d258e82e">
+    <con:settings/>
+    <con:config service="Student E2E APIs" resourcePath="/api/studentsDetails" methodName="Method 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Create_XLS" id="992ae885-7e09-4f59-8880-f50df4270464" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+        <con:request>{\r
+   "id" : 77,\r
+   "first_name" : "${Data Source_XLS#FirstName}",\r
+   "middle_name" : "${Data Source_XLS#MiddleName}",\r
+   "last_name" : "${Data Source_XLS#LastName}",\r
+   "date_of_birth" : "${Data Source_XLS#DateOfBirth}"\r
+}</con:request>
+        <con:originalUri>http://thetestingworldapi.com/api/studentsDetails</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="445b8c7e-5827-436f-a994-78c2f6162b66" name="Valid HTTP Status Codes" disabled="true">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="d857723c-168b-45ef-b633-244c590f7e6b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="PropertyTransfer 1" id="34a310c1-a43a-4f00-b0d2-f1ff7e538b7d">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+        <con:name>id</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>Create_XLS</con:sourceStep>
+        <con:sourcePath>$['id']</con:sourcePath>
+        <con:targetType>id</con:targetType>
+        <con:targetStep>Data Sink</con:targetStep>
+        <con:targetPath/>
+        <con:type>JSONPATH</con:type>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasink" name="Data Sink" id="11d4cdfb-9ec4-41dc-aa1c-c647c9a69e7c">
+    <con:settings/>
+    <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSink type="Excel">
+        <con:configuration>
+          <file/>
+          <outfile>C:/Users/MEGHMC/OneDrive - Capgemini/Createuser.xlsx</outfile>
+          <worksheet>Sheet1</worksheet>
+          <cell>F1</cell>
+          <evaluateFormulas>false</evaluateFormulas>
+          <append>false</append>
+        </con:configuration>
+      </con:dataSink>
+      <con:properties>
+        <con:property>
+          <con:name>id</con:name>
+          <con:value>937101</con:value>
+        </con:property>
+      </con:properties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="Data Source Loop_XLS" id="9232bb61-ea2f-43d3-93df-f9748520bc8a">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>Data Source_XLS</dataSourceStep>
+      <targetStep>Create_XLS</targetStep>
+      <discardResults>false</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>8a63daa9-e8bf-41b3-8a15-ae2a241cd117</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>b445c525-8646-41c9-bdfa-be38d258e82e</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>9232bb61-ea2f-43d3-93df-f9748520bc8a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

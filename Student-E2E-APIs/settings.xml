@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:RestService" id="cd7de93c-3f7f-4111-8287-2aba349e1bc4" name="Student E2E APIs" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cd7de93c-3f7f-4111-8287-2aba349e1bc4fileName">Student-E2E-APIs</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="Student E2E APIs.json">
+    <con:part>
+      <con:url>Student E2E APIs.json</con:url>
+      <con:content>{"openapi":"3.0.1","info":{"title":"Student E2E APIs","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/studentsDetails":{"put":{"description":"","parameters":[{"name":"id","in":"query","required":true,"schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/api/studentsDetails/111":{},"/api/studentsDetails/111/api/studentsDetails/{id}":{"delete":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}},"parameters":[{"name":"id","in":"path","required":true,"style":"simple","explode":false}]},"/api/studentsDetails/935100":{"get":{"parameters":[{"name":"{id}","in":"path","required":true,"style":"simple","explode":false,"schema":{"type":"string"}}],"responses":{"default":{"description":"Default response"}}}},"/api/studentsDetails/{id}":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}},"parameters":[{"name":"id","in":"path","required":true}]}}}</con:content>
+      <con:type>https://swagger.io/openapiv3/specification</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+  </con:endpoints>
+</con:interface>

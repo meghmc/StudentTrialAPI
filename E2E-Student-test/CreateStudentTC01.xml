@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="05f5d549-a558-4586-81a7-75440ef46575" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CreateStudentTC01" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="FlowLayout">true</con:setting>
+    <con:setting id="05f5d549-a558-4586-81a7-75440ef46575fileName">CreateStudentTC01</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Data Source" id="7b01e72a-fa79-4248-ba6b-f1f4dbb03ede">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="File">
+        <con:configuration>
+          <fileName>C:/Users/MEGHMC/OneDrive - Capgemini/Desktop/Generateuser.txt</fileName>
+          <separator>,</separator>
+          <trim>true</trim>
+          <charset>Cp1252</charset>
+          <quotedValues>true</quotedValues>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>firstN</con:property>
+      <con:property>Mname</con:property>
+      <con:property>LName</con:property>
+      <con:property>BOD</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request" id="0399ea41-cc02-4d86-9216-b915884a8de2">
+    <con:settings/>
+    <con:config service="Student E2E APIs" resourcePath="/api/studentsDetails" methodName="Method 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="992ae885-7e09-4f59-8880-f50df4270464" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+        <con:request>{\r
+   "id" : 77,\r
+   "first_name" : "${Data Source#firstN}",\r
+   "middle_name" : "${Data Source#Mname}",\r
+   "last_name" : "${Data Source#LName}",\r
+   "date_of_birth" : "${Data Source#BOD}"\r
+}</con:request>
+        <con:originalUri>http://thetestingworldapi.com/api/studentsDetails</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="445b8c7e-5827-436f-a994-78c2f6162b66" name="Valid HTTP Status Codes" disabled="true">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="d857723c-168b-45ef-b633-244c590f7e6b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="Data Source Loop" id="6d483787-174e-4167-bcda-fa50015e8bb0">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>Data Source</dataSourceStep>
+      <targetStep>REST Request</targetStep>
+      <discardResults>false</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="cae316d1-e8d6-4d0d-9d32-59c1352cbb66" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="UpdateStudent" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cae316d1-e8d6-4d0d-9d32-59c1352cbb66fileName">UpdateStudent</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="084ed812-bc3b-4a81-b86f-cee7489583f7">
+    <con:settings/>
+    <con:config service="Student E2E APIs" resourcePath="/api/studentsDetails" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="48b004a9-e2c9-4a15-8be4-532f7f3dadb1" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://thetestingworldapi.com/api/studentsDetails</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="6e0541cf-1cc4-411e-a024-307ca0c0ce50" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="d05dc3a2-f1e8-433d-a34c-8296e893aa68" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="99"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Student E2E" path="/api/studentsDetails" id="08867952-6220-4a28-9773-b4535d7e5cc7" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="08867952-6220-4a28-9773-b4535d7e5cc7fileName">Student-E2E</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:resource name="Get Student by ID" path="935100" id="5f04d4c5-f510-4db7-b0fb-7093fb705364">
+    <con:settings/>
+    <con:parameters/>
+    <con:method name="Method 3" id="d9a81ec7-7743-42c0-87ef-e374dfd97467" method="GET">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>id</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:request name="Request 1" id="9ac274fb-d2d8-47af-831b-0401672b4b92" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://thetestingworldapi.com/</con:originalUri>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="99"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="UpdateStudent" path="" id="1dd3c1ee-e580-474a-ae42-3019cf1e3fc2">
+    <con:settings/>
+    <con:parameters/>
+    <con:method name="Method 1" id="c46695fd-429a-4708-b1b0-2fcf086760d9" method="PUT">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>id</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+        </con:parameter>
+      </con:parameters>
+      <con:request name="UpdateStudent" id="48b004a9-e2c9-4a15-8be4-532f7f3dadb1" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="99"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:resource name="DeleteStudent" path="111" id="51646fdc-5fa5-46b1-938b-7f32fa156072">
+    <con:settings/>
+    <con:parameters/>
+    <con:resource name="{id}" path="api/studentsDetails/{id}" id="ee48dc7b-2f69-4cf3-9feb-0379f1c69fb4">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>id</con:name>
+          <con:value>id</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>id</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method 1" id="394d7a58-b9e0-43fd-bfc2-176be27fd623" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="f0b5db92-4d89-4639-a059-cc44345519c8" mediaType="application/json" postQueryString="false">
+          <con:settings/>
+          <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="id" value="99"/>
+          </con:parameters>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:resource>
+  <con:resource name="{id}" path="{id}" id="a2ff4f44-07e9-4fc1-9a30-d26f8e1fc8f8">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>id</con:name>
+        <con:value>id</con:value>
+        <con:style>TEMPLATE</con:style>
+        <con:default>id</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:method name="Method 1" id="571444fd-21f4-403f-ab33-dd149058186b" method="GET">
+      <con:settings/>
+      <con:parameters/>
+      <con:request name="Request 1" id="690ba6c0-9877-43eb-9902-fcea4d2bc1ff" mediaType="application/json">
+        <con:settings/>
+        <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+        <con:request/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="88"/>
+        </con:parameters>
+      </con:request>
+    </con:method>
+  </con:resource>
+  <con:method name="Method 1" id="f6e3437a-8a5f-464c-88fb-f1377065db12" method="GET">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="GetAllStudents" id="8a933257-fe9d-4e3f-9021-ac37f76bbab2" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://thetestingworldapi.com/api/studentsDetails</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+  <con:method name="Method 2" id="8f646e5b-0ec8-46b7-adf7-309348e09399" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="CreateNewStudent" id="992ae885-7e09-4f59-8880-f50df4270464" mediaType="application/json" postQueryString="false">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+      <con:request>{
+  "id": 77,
+  "first_name": "Karna",
+  "middle_name": " ",
+  "last_name": "CM",
+  "date_of_birth": "23-09-2012"
+}</con:request>
+      <con:originalUri>http://thetestingworldapi.com/api/studentsDetails</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

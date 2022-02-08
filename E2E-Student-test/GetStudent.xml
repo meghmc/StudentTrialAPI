@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="17fcacb9-9e77-4e72-a90a-0c4efa747e8a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="GetStudent" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="17fcacb9-9e77-4e72-a90a-0c4efa747e8afileName">GetStudent</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="41b67fbd-a5df-4a06-80f7-476f6cb25cf7">
+    <con:settings/>
+    <con:config service="Student E2E APIs" resourcePath="/api/studentsDetails/{id}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="690ba6c0-9877-43eb-9902-fcea4d2bc1ff" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://thetestingworldapi.com/api/studentsDetails/935253</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="dae1e958-2fa5-4466-9a3e-76c9e041383a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="c8dafb40-0c29-41c3-9d1c-d4661d177340" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${#[E2E Student test#CreateStudentTC01#Properties 1]#id}"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

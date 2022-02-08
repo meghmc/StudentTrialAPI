@@ -1,0 +1,7 @@
+Student-E2E-APIs\Student-E2E.xml
+E2E-Student-test\CreateStudentTC01.xml
+E2E-Student-test\GetStudent.xml
+E2E-Student-test\UpdateStudent.xml
+E2E-Student-test\DDT_XLS.xml
+E2E-Student-test\DDT_Gird.xml
+E2E-Student-test\DDT_Generator.xml

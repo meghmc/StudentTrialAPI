@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="71081afc-906a-43e1-a29e-7471ac9344c0" created="3.20.1" activeEnvironment="Default environment" name="Student E2E" resourceRoot="" updated="3.20.1" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project id="71081afc-906a-43e1-a29e-7471ac9344c0" created="3.20.1" activeEnvironment="Default environment" name="Student end 2 end test" resourceRoot="" updated="3.20.1" encryptionMode="Not encrypted" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.ProTestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Settings File Password" value=""/>
@@ -38,6 +38,7 @@
   <con:entry key="Tool Args" value=""/>
   <con:entry key="Save Project" value="true"/>
 </xml-fragment>]]></con:setting>
+    <con:setting id="71081afc-906a-43e1-a29e-7471ac9344c0fileName">Student-E2E-readyapi-project</con:setting>
   </con:settings>
   <con:requirements/>
   <con:properties/>
@@ -46,7 +47,6 @@
   <con:jmsConnectionContainer/>
   <con:oAuth2ProfileContainer/>
   <con:oAuth1ProfileContainer/>
-  <con:reporting/>
   <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
     <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
 // This code is often used for adding custom authentication to ReadyAPI functional tests

@@ -1,0 +1,1432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="1caa4c2d-e115-44c8-bb3c-3a720c438ffd" created="3.20.1" activeEnvironment="Default environment" name="REQRESproject" updated="3.20.1 2022-01-18T13:40:47Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="9a17d3a3-ace7-481d-a0df-328dce863d8f" name="ReqRes" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="ReqRes.json">
+      <con:part>
+        <con:url>ReqRes.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"ReqRes","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/users":{"post":{"description":"","requestBody":{"content":{"application/json":{"example":"{\n    \"name\": \"morpheus\",\n    \"job\": \"leader\"\n}"}}},"responses":{"default":{"description":"Default response"}}}},"/api/register":{"post":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/api/users/9":{"put":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/api/users/3":{"delete":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/api/login":{"description":"","post":{"description":"","requestBody":{"content":{"application/json":{"example":"{\n    \"email\": \"eve.holt@reqres.in\",\n    \"password\": \"cityslicka\"\n}"}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://reqres.in</con:endpoint>
+    </con:endpoints>
+    <con:resource name="List Users" path="/api/users" id="3a8fe06e-b4e9-48ca-b99b-36caf9b04d81">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="8ce21ce5-d68a-4ffe-8f25-e1b2e22a53a2" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>page</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:request name="LIST Users" id="9f07a7f6-1f1a-44e0-b740-8e4c237fc87f" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <con:entry key="page" value="2"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>page</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="users" path="/api/users" id="847ec46e-de12-4301-b868-9d84c02d9350">
+      <con:settings/>
+      <con:parameters/>
+      <con:resource name="9" path="9" id="661bf323-c251-4257-b8f6-990276f0b3c4">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="Method 1" id="3299345f-13da-4381-aea8-9a601122bb16" method="PUT">
+          <con:settings/>
+          <con:parameters/>
+          <con:request name="UpdateUser9" id="0ffc1057-1de6-4fe0-b618-d5676bc003e4" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request>{
+    "name": "morpheus",
+    "job": "zion resident"
+}</con:request>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="3" path="3" id="b0a3f481-07b6-4995-be02-3aee87101b25">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="Method 1" id="1f40126c-8ce8-4703-b8b3-bce136a2c5be" method="DELETE">
+          <con:settings/>
+          <con:parameters/>
+          <con:request name="DELETE_user3" id="6f1e7a6b-f307-477e-9d31-cccf39903a75" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:method name="Method 1" id="d3e4baa2-a831-4f77-a30c-82660d4e21fb" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="CreateUser" id="9437b0f6-9b59-45cc-8efd-a95b46abb9be" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request>{
+    "name": "morpheus",
+    "job": "leader"
+}</con:request>
+          <con:originalUri>https://reqres.in/api/users</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="register" path="/api/register" id="6dd7503c-767f-4d39-bbb1-9688323a52bd">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="b341d943-e8a7-4548-92ba-2bd71a23ee83" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Register_new" id="655d743f-db67-44d4-ab18-c98eacdb31c2" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request>{
+    "email": "eve.holt@reqres.in",
+    "password": "pistol"
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="login" path="/api/login" id="c7422a99-9873-4be6-ad90-640f84cfed0b">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="b67773c1-5ab2-446c-874b-65eb5550bead" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Login" id="ee709ac2-1f26-4313-bbb5-e574a7b8c6ad" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request>{
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
+}</con:request>
+          <con:originalUri>http://mumfw.corp.capgemini.com/XX/YY/ZZ/cpauth</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="c6ce0b15-08b7-4b73-9988-6ff4802a8f9a" name="ReqRes TestSuite">
+    <con:description>The test suite generated for the REST service [ReqRes]</con:description>
+    <con:settings>
+      <con:setting id="IncludeOverview">true</con:setting>
+      <con:setting id="IncludeResults">true</con:setting>
+      <con:setting id="FlowLayout">false</con:setting>
+      <con:setting id="ErrorDetails">true</con:setting>
+      <con:setting id="IncludeCoverage">true</con:setting>
+    </con:settings>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="ae2907ab-92a0-40d7-a982-527b760302a1" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="List_userstest" searchProperties="true" timeout="0">
+      <con:description>The test case generated for the REST resource [2] located at [/api/users]</con:description>
+      <con:settings>
+        <con:setting id="FlowLayout">true</con:setting>
+        <con:setting id="GeneratableJUnitReport@Style">Single Page (Print)</con:setting>
+        <con:setting id="GeneratableJUnitReport@Folder">C:\Users\MEGHMC\OneDrive - Capgemini\Desktop</con:setting>
+        <con:setting id="IncludeOverview">false</con:setting>
+        <con:setting id="IncludeResults">false</con:setting>
+      </con:settings>
+      <con:testStep type="restrequest" name="LIST Users" id="7b7cf1e5-d689-402c-94e4-66e893f54209">
+        <con:settings/>
+        <con:config service="ReqRes" resourcePath="/api/users" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="LIST Users" id="9f07a7f6-1f1a-44e0-b740-8e4c237fc87f" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://reqres.in/api/users</con:originalUri>
+            <con:assertion type="DataAndMetadataAssertion" id="a878fed2-73c7-4e44-b170-1676bd6865b0" name="Smart Assertion">
+              <con:configuration xsi:type="con:DataAndMetadataAssertion">
+                <con:mode>Received Data</con:mode>
+                <con:elements>
+                  <con:path>$['page']</con:path>
+                  <con:element>page</con:element>
+                  <con:operatorId>2</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>90</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['per_page']</con:path>
+                  <con:element>per_page</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>6</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['total']</con:path>
+                  <con:element>total</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>12</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['total_pages']</con:path>
+                  <con:element>total_pages</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>2</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][0]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>9</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>7</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][0]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>9</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>michael.lawson@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][0]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>12</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Michael</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][0]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>12</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Lawson</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][0]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>9</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/7-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][1]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>16</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>8</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][1]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>lindsay.ferguson@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][1]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Lindsay</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][1]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Ferguson</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][1]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/8-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][2]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>9</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][2]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>tobias.funke@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][2]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Tobias</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][2]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Funke</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][2]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/9-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][3]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>10</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][3]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>byron.fields@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][3]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Byron</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][3]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Fields</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][3]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/10-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][4]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>11</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][4]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>george.edwards@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][4]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>George</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][4]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Edwards</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][4]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/11-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][5]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>12</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][5]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>rachel.howell@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][5]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Rachel</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][5]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>Howell</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][5]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/12-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['support']['url']</con:path>
+                  <con:element>url</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>https://reqres.in/#support-heading</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['support']['text']</con:path>
+                  <con:element>text</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>To keep ReqRes free, contributions towards server costs are appreciated!</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:originalMessage>{"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}</con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" id="acf9187a-1680-4816-94df-55f9d02dc47f" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="HTTP Header Equals" id="440baf14-3f7b-433c-8513-6e31de7b6bbe" name="Verify Connection Header">
+              <con:configuration>
+                <Header>Connection</Header>
+                <Value>keep-alive</Value>
+                <ignoreCase>true</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="69d4a2b5-6c4f-4f0d-b3cc-6d9f36fb779f" name="Verfiy Support key is present">
+              <con:configuration>
+                <token>support</token>
+                <ignoreCase>true</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="DataAndMetadataAssertion" id="e778b58f-879b-4ced-b90a-58f67d3d05df" name="Smart Assertion on Exist">
+              <con:configuration xsi:type="con:DataAndMetadataAssertion">
+                <con:mode>Received Data</con:mode>
+                <con:elements>
+                  <con:path>$['page']</con:path>
+                  <con:element>page</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>2</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['per_page']</con:path>
+                  <con:element>per_page</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>6</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['total']</con:path>
+                  <con:element>total</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>12</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['total_pages']</con:path>
+                  <con:element>total_pages</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>2</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][0]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>7</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][0]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>michael.lawson@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][0]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Michael</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][0]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Lawson</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][0]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/7-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][1]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>8</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][1]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>lindsay.ferguson@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][1]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Lindsay</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][1]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Ferguson</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][1]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/8-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][2]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>9</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][2]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>tobias.funke@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][2]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Tobias</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][2]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Funke</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][2]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/9-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][3]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>10</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][3]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>byron.fields@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][3]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Byron</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][3]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Fields</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][3]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/10-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][4]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>11</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][4]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>george.edwards@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][4]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>George</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][4]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Edwards</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][4]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/11-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][5]['id']</con:path>
+                  <con:element>id</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>12</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>true</con:numberType>
+                  <con:expectedDataType>2</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][5]['email']</con:path>
+                  <con:element>email</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>rachel.howell@reqres.in</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][5]['first_name']</con:path>
+                  <con:element>first_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Rachel</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][5]['last_name']</con:path>
+                  <con:element>last_name</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Howell</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['data'][5]['avatar']</con:path>
+                  <con:element>avatar</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>https://reqres.in/img/faces/12-image.jpg</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['support']['url']</con:path>
+                  <con:element>url</con:element>
+                  <con:operatorId>12</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>https://reqres.in/#support-heading</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['support']['text']</con:path>
+                  <con:element>text</con:element>
+                  <con:operatorId>9</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>To keep ReqRes free, contributions towards server costs are appreciated!</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:originalMessage>{"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}</con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="21aab090-42a4-40ab-afb2-0bec653816c4" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="page" value="2"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>page</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="5a6daa73-fabe-4115-92f6-5c356a86c455" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="9 Test Case" searchProperties="true" timeout="0">
+      <con:description>The test case generated for the REST resource [9] located at [/api/users/9]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="UpdateUser9" id="30df6bf6-8fe2-4b3d-8723-f80ac3e1013a">
+        <con:settings/>
+        <con:config service="ReqRes" resourcePath="/api/users/9" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="UpdateUser9" id="0ffc1057-1de6-4fe0-b618-d5676bc003e4" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request>{
+    "name": "morpheus",
+    "job": "zion resident"
+}</con:request>
+            <con:originalUri>https://reqres.in/api/users/9</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="a24ae355-b376-4d34-a740-ac7174864b7d" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="MessageContentAssertion" id="6ffff3a3-2b23-4693-95e5-e4fe50463220" name="Verify Contains Name , Job, Updated time">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://reqres.in/api/users/9';
+//ns1:Response[1]/ns1:name[1]</con:xpath>
+                  <con:element>name</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>exists</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>morpheus</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://reqres.in/api/users/9';
+//ns1:Response[1]/ns1:job[1]</con:xpath>
+                  <con:element>job</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>exists</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>zion resident</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://reqres.in/api/users/9';
+//ns1:Response[1]/ns1:updatedAt[1]</con:xpath>
+                  <con:element>updatedAt</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>exists</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>2022-02-04T10:25:47.795Z</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage><![CDATA[<Response xmlns="https://reqres.in/api/users/9">
+   <name>morpheus</name>
+   <job>zion resident</job>
+   <updatedAt>2022-02-04T10:25:47.795Z</updatedAt>
+</Response>]]></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="4491f82a-9441-4e91-b8c9-83a13dad5471" name="Verfiy UpdatedAt field display">
+              <con:configuration>
+                <token>updatedAt</token>
+                <ignoreCase>true</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="1781157d-6313-4244-bd8d-b0b0ff7ee526" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="3 Test Case" searchProperties="true" timeout="0">
+      <con:description>The test case generated for the REST resource [3] located at [/api/users/3]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="DELETE_user3" id="c70b24c1-3bce-4930-bb54-59312efb2e28">
+        <con:settings/>
+        <con:config service="ReqRes" resourcePath="/api/users/3" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="DELETE_user3" id="6f1e7a6b-f307-477e-9d31-cccf39903a75" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://reqres.in/api/users/3</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="277ba35e-19e3-47f5-95a1-2cfe6f8019f3" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>204</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="4626ff71-dc50-4bea-9d23-d6bbf18e5d1d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="register Test Case" searchProperties="true" timeout="0">
+      <con:description>The test case generated for the REST resource [register] located at [/api/register]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Register_new" id="08b160e5-81f0-4232-8b63-34056385d536">
+        <con:settings/>
+        <con:config service="ReqRes" resourcePath="/api/register" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Register_new" id="655d743f-db67-44d4-ab18-c98eacdb31c2" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request>{
+    "email": "eve.holt@reqres.in",
+    "password": "pistol"
+}</con:request>
+            <con:originalUri>https://reqres.in/api/register</con:originalUri>
+            <con:assertion type="Simple Contains" id="23e665ba-480f-450b-a28e-eb5fe106024d" name="Verify id is visible">
+              <con:configuration>
+                <token>id</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="86e13619-8ee2-486c-b459-de0382e54c80" name="verfiy token is visible">
+              <con:configuration>
+                <token>token</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" id="22be7d27-64a4-4682-954c-da7473a4d71c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="DataAndMetadataAssertion" id="e87f5c39-087d-4fb7-b48c-81f9e79d9225" name="Smart Assertion">
+              <con:configuration xsi:type="con:DataAndMetadataAssertion">
+                <con:mode>Received Metadata</con:mode>
+                <con:elements>
+                  <con:path>$['Headers']['date']</con:path>
+                  <con:element>date</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Fri, 04 Feb 2022 09:55:20 GMT</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['server']</con:path>
+                  <con:element>server</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>cloudflare</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['content-length']</con:path>
+                  <con:element>content-length</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>36</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['cf-ray']</con:path>
+                  <con:element>cf-ray</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>6d8305d18feb83f3-BLR</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['cf-cache-status']</con:path>
+                  <con:element>cf-cache-status</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>DYNAMIC</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['expect-ct']</con:path>
+                  <con:element>expect-ct</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['via']</con:path>
+                  <con:element>via</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>1.1 vegur</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['access-control-allow-origin']</con:path>
+                  <con:element>access-control-allow-origin</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>*</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['nel']</con:path>
+                  <con:element>nel</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>{"success_fraction":0,"report_to":"cf-nel","max_age":604800}</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['x-powered-by']</con:path>
+                  <con:element>x-powered-by</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>Express</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['connection']</con:path>
+                  <con:element>connection</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>keep-alive</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['etag']</con:path>
+                  <con:element>etag</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>W/"24-4iP0za1geN2he+ohu8F0FhCjLks"</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['content-type']</con:path>
+                  <con:element>content-type</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>application/json; charset=utf-8</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['report-to']</con:path>
+                  <con:element>report-to</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5nynqFdyrBdv%2FnO%2B21AnR89rJQlMW%2BriPdpmbOCzMPSzu42oXovMAhAZmzfQxIC7W2GN7v0ZX1ijOVnwQQ4XFf%2BFPT6PjQSGPrp57yJyNp%2F95O1CVaRok6xMPTs%3D"}],"group":"cf-nel","max_age":604800}</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['#status#']</con:path>
+                  <con:element>#status#</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>HTTP/1.1 200 OK</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:elements>
+                  <con:path>$['Headers']['alt-svc']</con:path>
+                  <con:element>alt-svc</con:element>
+                  <con:operatorId>1</con:operatorId>
+                  <con:enabled>false</con:enabled>
+                  <con:expectedValue>h3=":443"; ma=86400, h3-29=":443"; ma=86400</con:expectedValue>
+                  <con:caseSensitive>true</con:caseSensitive>
+                  <con:numberType>false</con:numberType>
+                  <con:expectedDataType>1</con:expectedDataType>
+                </con:elements>
+                <con:originalMessage>{"Headers":{"date":"Fri, 04 Feb 2022 09:55:20 GMT","server":"cloudflare","content-length":"36","cf-ray":"6d8305d18feb83f3-BLR","cf-cache-status":"DYNAMIC","expect-ct":"max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"","via":"1.1 vegur","access-control-allow-origin":"*","nel":"{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}","x-powered-by":"Express","connection":"keep-alive","etag":"W/\"24-4iP0za1geN2he+ohu8F0FhCjLks\"","content-type":"application/json; charset=utf-8","report-to":"{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=5nynqFdyrBdv%2FnO%2B21AnR89rJQlMW%2BriPdpmbOCzMPSzu42oXovMAhAZmzfQxIC7W2GN7v0ZX1ijOVnwQQ4XFf%2BFPT6PjQSGPrp57yJyNp%2F95O1CVaRok6xMPTs%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}","#status#":"HTTP/1.1 200 OK","alt-svc":"h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"}}</con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="c8c2b8e6-49e0-4f1e-87e5-de4c1dfafe29" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="login Test Case" searchProperties="true" timeout="0">
+      <con:description>The test case generated for the REST resource [login] located at [/api/login]</con:description>
+      <con:settings/>
+      <con:testStep type="restrequest" name="Login" id="4384005d-e100-44ae-8c7f-c3c9f73c60ac">
+        <con:settings/>
+        <con:config service="ReqRes" resourcePath="/api/login" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Login" id="ee709ac2-1f26-4313-bbb5-e574a7b8c6ad" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request>{
+    "email": "eve.holt@reqres.in",
+    "password": "cityslicka"
+}</con:request>
+            <con:originalUri>https://reqres.in/api/login</con:originalUri>
+            <con:assertion type="MessageContentAssertion" id="51795148-0747-4ff1-a96f-21192334d17b" name="Verify Token  exist">
+              <con:configuration xsi:type="con:MessageContentAssertion">
+                <con:elements>
+                  <con:xpath>declare namespace ns1='https://reqres.in/api/login';
+//ns1:Response[1]/ns1:token[1]</con:xpath>
+                  <con:element>token</con:element>
+                  <con:type xsi:nil="true"/>
+                  <con:operator>exists</con:operator>
+                  <con:enabled>true</con:enabled>
+                  <con:expectedValue>QpwL5tke4Pnpja7X4</con:expectedValue>
+                  <con:hasValue>false</con:hasValue>
+                  <con:numberType>false</con:numberType>
+                </con:elements>
+                <con:originalMessage>&lt;Response xmlns="https://reqres.in/api/login">
+   &lt;token>QpwL5tke4Pnpja7X4&lt;/token>
+&lt;/Response></con:originalMessage>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="37ed0717-9e6e-4027-8666-0718ee07c835" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CreateTestCase" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="REST Request" id="d4d7a759-5593-45c8-96ba-a218a39645f8">
+        <con:settings/>
+        <con:config service="ReqRes" methodName="Method 1" resourcePath="/api/users" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="REST Request" id="f2728eec-30d2-4756-b48d-8d716772dd14" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://reqres.in/api/users</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="ff27318c-832b-4953-a521-5dc23209e191" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="6a404f34-31d6-4dcf-911a-2977b7959b47" name="Response SLA">
+              <con:configuration>
+                <SLA>200</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="b0a5cf9c-923f-4d30-b02b-ecacaf21bfcb" created="3.20.1" activeEnvironment="Default environment" name="TechnicalSkills_apis" updated="3.20.1 2022-01-18T13:40:47Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="86b201b9-fbde-416e-9f03-e4acd065cf11" name="TechnicalSkills" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="TechnicalSkills.json">
+      <con:part>
+        <con:url>TechnicalSkills.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"TechnicalSkills","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/technicalskills":{"get":{"responses":{"default":{"description":"Default response"}}}},"/api/technicalskills/33":{"get":{"responses":{"default":{"description":"Default response"}}}},"/api/technicalskills/099":{"put":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/api/technicalskills/77":{"delete":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}},"/api/technicalskills/api/technicalskills":{"description":"","post":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="technicalskills" path="/api/technicalskills" id="a74c7334-e39f-4cc2-ad6e-3f2b7c8299c1">
+      <con:settings/>
+      <con:parameters/>
+      <con:resource name="33" path="33" id="a03a1e9e-0228-4ae1-9956-685e96db0bd9">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="Method 1" id="9571f1c6-8cc1-4bd7-911f-430e90a6564e" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:request name="Request 1" id="dd485bc0-f264-4168-8969-4b1a1dd6a245" mediaType="application/json">
+            <con:settings/>
+            <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="099" path="099" id="fc9ecac1-ab14-40ff-8159-2d51b6c6a9fe">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="Method 1" id="c83fa583-29b9-4740-bd20-de9fb1b17457" method="PUT">
+          <con:settings/>
+          <con:parameters/>
+          <con:request name="Request 1" id="957fc929-eaf5-4657-86fa-2d9c66911098" mediaType="application/json" postQueryString="false">
+            <con:settings/>
+            <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="77" path="77" id="c421d3be-01ea-4fcb-a9b3-55016aca61fb">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="Method 1" id="1009774c-1a52-4009-8bf5-0da50d9524b9" method="DELETE">
+          <con:settings/>
+          <con:parameters/>
+          <con:request name="Request 1" id="9ddb1fb1-3340-4c2d-a304-e560332bea48" mediaType="application/json" postQueryString="false">
+            <con:settings/>
+            <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="technicalskills" path="api/technicalskills" id="79035c43-8cc3-454f-a936-58402402ea89">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="Method 1" id="98cfc79f-cafc-42f7-8c3d-7d7d27db8610" method="POST">
+          <con:settings/>
+          <con:parameters/>
+          <con:request name="Request 1" id="e1a94904-1928-4fc0-95b7-7d28b069a2e6" mediaType="application/json" postQueryString="false">
+            <con:settings/>
+            <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:method name="Method 1" id="8133bd5e-7b40-4a14-9f5f-2c5db2c82de9" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="2cba7a47-544d-45a7-8a69-3e3841ef2d11" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://thetestingworldapi.com</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

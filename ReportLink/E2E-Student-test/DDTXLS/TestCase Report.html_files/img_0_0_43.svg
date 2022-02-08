@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-datasource_step">
+      <rect width="16" height="16"/>
+    </clipPath>
+  </defs>
+  <g id="datasource_step" clip-path="url(#clip-datasource_step)">
+    <g id="Group_4340" data-name="Group 4340">
+      <path id="Subtraction_8" data-name="Subtraction 8" d="M-2161.992-600.682h0c-2.4-.277-4.008-1.02-4.008-1.849V-605.8a11.493,11.493,0,0,0,6,1.3,11.494,11.494,0,0,0,6-1.3v3.267c0,.829-1.611,1.572-4.01,1.848v-1.49a1.207,1.207,0,0,0-1.177-1.328h-1.625c-1.166,0-1.179,1.274-1.179,1.328v1.489Zm1.992-4.687c-3.309,0-6-.879-6-1.959v-.713c0-1.08,2.692-1.959,6-1.959s6,.879,6,1.959v.713C-2154-606.248-2156.691-605.369-2160-605.369Z" transform="translate(2168 611.5)" fill="#4b5662"/>
+      <path id="Path_3459" data-name="Path 3459" d="M-2.593-9.552a.33.33,0,0,0-.33.33v2.555H-4.351a.331.331,0,0,0-.234.564l2.418,2.422a.331.331,0,0,0,.468,0L.721-6.1a.331.331,0,0,0-.234-.564H-.942V-9.222a.33.33,0,0,0-.33-.33Z" transform="translate(9.932 18.55)" fill="#2cb14a"/>
+    </g>
+  </g>
+</svg>

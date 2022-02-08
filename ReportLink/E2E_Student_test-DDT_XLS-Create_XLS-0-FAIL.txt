@@ -1,0 +1,55 @@
+Status: FAIL
+Time Taken: 326
+Size: 92
+Timestamp: Mon Feb 07 17:35:12 IST 2022
+TestStep: Create_XLS
+
+----------------- Messages ------------------------------
+[Response SLA] Response did not meet SLA 326/200
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: http://thetestingworldapi.com
+Method: POST
+StatusCode: 201
+URL: http://thetestingworldapi.com/api/studentsDetails
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.2 (Java/16.0.1)]
+Host: [thetestingworldapi.com]
+Accept-Encoding: [gzip,deflate]
+Content-Length: [125]
+Content-Type: [application/json]
+
+POST http://thetestingworldapi.com/api/studentsDetails HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/json
+Content-Length: 125
+Host: thetestingworldapi.com
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/16.0.1)
+
+{
+   "id" : 77,
+   "first_name" : "Kira",
+   "middle_name" : "M",
+   "last_name" : "L",
+   "date_of_birth" : "8/9/87"
+}
+
+---------------- Response --------------------------
+Cache-Control: [no-cache]
+Server: [Microsoft-IIS/8.5]
+X-AspNet-Version: [4.0.30319]
+Pragma: [no-cache]
+Expires: [-1]
+#status#: [HTTP/1.1 201 Created]
+X-Powered-By-Plesk: [PleskWin]
+Content-Length: [92]
+Date: [Mon, 07 Feb 2022 12:05:12 GMT]
+Content-Type: [application/json; charset=utf-8]
+Location: [http://thetestingworldapi.com/api/studentsDetails/937149]
+X-Powered-By: [ASP.NET]
+
+{"id":937149,"first_name":"Kira","middle_name":"M","last_name":"L","date_of_birth":"8/9/87"}

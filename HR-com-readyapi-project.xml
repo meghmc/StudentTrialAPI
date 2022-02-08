@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="7ad38b26-579c-4083-895b-1581c3db6481" created="3.20.1" activeEnvironment="Default environment" name="HR.com" updated="3.20.1 2022-01-18T13:40:47Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="6a53430a-c427-4e96-b2b7-96fb3041eb5f" name="List Users" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="List Users.json">
+      <con:part>
+        <con:url>List Users.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"List Users","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/users":{"get":{"responses":{"default":{"description":"Default response"}}},"parameters":[{"name":"page","in":"query","required":false,"style":"form","explode":true}]}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://reqres.in</con:endpoint>
+    </con:endpoints>
+    <con:resource name="users" path="/api/users" id="d20fba26-7dbc-428b-aa47-2bfe9656cba7">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>page</con:name>
+          <con:value>2</con:value>
+          <con:style>QUERY</con:style>
+          <con:default>2</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method 1" id="0f8e403e-5a89-4828-9aa0-03e6dce5defc" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="4a0fa5d2-cc5d-4b4d-bd1c-8d2f5fe61197" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            <con:setting id="com.eviware.soapui.support.editor.views.xml.form2.FormEditorView@ViewType">Mandatory and Data</con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://reqres.in/api/users</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="37b1440b-1a4f-4684-b276-45fd0a3391e7" name="Single user" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="Single user.json">
+      <con:part>
+        <con:url>Single user.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"Single user","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/users/2":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://reqres.in/</con:endpoint>
+    </con:endpoints>
+    <con:resource name="" path="/api/users/2" id="c9d87257-e6bb-4a19-84e6-eb0f5d9246de">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="848a5925-9908-479b-b5aa-84647973c7fe" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="d6e04f77-6248-49d9-ae04-8e81da1d9bb9" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="590c343a-a043-4e88-be36-e2cd1059a571" name="Create User" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="Create User.json">
+      <con:part>
+        <con:url>Create User.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"Create User","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/users":{"description":"","post":{"description":"","requestBody":{"content":{"application/json":{"example":"{\n    \"name\": \"mc\",\n    \"job\": \"b2\"\n}"}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://reqres.in/</con:endpoint>
+    </con:endpoints>
+    <con:resource name="users" path="/api/users" id="2c91b72f-c2d9-4f80-bdf4-82795dc8421a">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="51c7b2be-cf78-4a68-a909-c45df14f1e6d" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="00ff98ea-3d7f-4ef9-8b7d-07b07e843660" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in/</con:endpoint>
+          <con:request>{
+    "name": "mc",
+    "job": "b2"
+}</con:request>
+          <con:originalUri>https://reqres.in/api/users</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="299b4d56-ca9f-49b0-965f-40fdb2882fee" name="Update User" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="Update User.json">
+      <con:part>
+        <con:url>Update User.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"Update User","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/users/778":{"description":"","put":{"description":"","requestBody":{"content":{"application/json":{"example":"{\n    \"name\": \"mc\",\n    \"job\": \"c3\"\n}"}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://reqres.in</con:endpoint>
+    </con:endpoints>
+    <con:resource name="2" path="/api/users/778" id="9e2897b3-bf20-424a-99ad-0d835490c1e3">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="098ba144-293e-4935-9a22-6313b4a6df5e" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="d838a8d1-b29e-4164-977e-2edb3ea805f0" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request>{
+    "name": "mc",
+    "job": "c3"
+}</con:request>
+          <con:originalUri>https://reqres.in/api/users/778</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="5f8dcd6a-62b1-4288-b090-7ca10dd63084" name="Delete User" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="Delete User.json">
+      <con:part>
+        <con:url>Delete User.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"Delete User","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/users/778":{"delete":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://reqres.in/</con:endpoint>
+    </con:endpoints>
+    <con:resource name="778" path="/api/users/778" id="6dc11deb-fc16-4b01-8144-5744b06829ae">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="79256ad2-de9e-486e-96c5-5de248d086df" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="21bc4e99-622c-4732-918e-523feaaae458" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://reqres.in/api/users/778</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="b83ae9c9-5f05-4338-b7e8-9c4e6ca662be" name="SignUp" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="SignUp.json">
+      <con:part>
+        <con:url>SignUp.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"SignUp","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/register":{"description":"","post":{"description":"","requestBody":{"content":{"application/json":{"example":"{\n    \"email\": \"michael.lawson@reqres.in\",\n    \"password\": \"pistol\"\n}"}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://reqres.in</con:endpoint>
+    </con:endpoints>
+    <con:resource name="register" path="/api/register" id="627c7d32-7e7e-4c96-8cdb-490bfc9e31bb">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="8f1c50e8-4c50-405e-b8d4-f3b47a62f077" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="68a16b6b-2a61-4811-b5b8-50beb26fa5a4" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request>{
+    "email": "michael.lawson@reqres.in",
+    "password": "pistol"
+}</con:request>
+          <con:originalUri>https://reqres.in/api/register</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="a182d6a9-f058-4885-9838-d6a9d5938072" name="Login" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="Login.json">
+      <con:part>
+        <con:url>Login.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"Login","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/login":{"description":"","post":{"description":"","requestBody":{"content":{"application/json":{"example":"{\n    \"email\": \"michael.lawson@reqres.in\",\n    \"password\": \"cityslicka\"\n}"}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://reqres.in</con:endpoint>
+    </con:endpoints>
+    <con:resource name="login" path="/api/login" id="d0926e1d-8399-4eb0-bf81-8257c6db8c9b">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="ef9b7675-733d-4bee-9694-026da7793568" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="485fd07e-d968-4566-ab2b-33eb33cd96f3" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request>{
+    "email": "michael.lawson@reqres.in",
+    "password": "cityslicka"
+}</con:request>
+          <con:originalUri>https://reqres.in/api/login</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="c8c67391-e1f5-4ddf-ab15-7f2a0d5faedb" name="Register_unsuccessful" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="Register_unsuccessful.json">
+      <con:part>
+        <con:url>Register_unsuccessful.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"Register_unsuccessful","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/register":{"post":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://reqres.in/</con:endpoint>
+    </con:endpoints>
+    <con:resource name="register" path="/api/register" id="072f65d3-d2a5-4e07-8729-f601d0833dda">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="11b8a8d2-f306-42fe-8088-a6a2b6f05dc9" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="37ef551c-0c6b-4b5f-be1c-e8397a03c3f4" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in/</con:endpoint>
+          <con:request>{
+    "email": "megg@fife"
+}</con:request>
+          <con:originalUri>https://reqres.in/api/register</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="fc3cf4f5-5e42-4b69-9745-d2cacfd796e4" name="Login_unsuccessful" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="Login_unsuccessful.json">
+      <con:part>
+        <con:url>Login_unsuccessful.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"Login_unsuccessful","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/api/login":{"post":{"requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://reqres.in/</con:endpoint>
+    </con:endpoints>
+    <con:resource name="login" path="/api/login" id="dce2d91c-369e-48d6-abc4-8905b9b16c17">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="d4844e84-0eeb-47f4-a127-2667927f7104" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="20073b24-08b5-4ffe-88da-c11520dc6432" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in/</con:endpoint>
+          <con:request>{
+    "email": "mmc@klaven"
+}</con:request>
+          <con:originalUri>https://reqres.in/api/login</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
